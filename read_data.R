@@ -34,4 +34,4 @@ df <- map_df(file_names, \(x) {
   relocate(out, query)
 })
 
-df
+readr::write_rds(df, "output.rds", compress = "xz")
